@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tugu Wisata</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff;
+color:#222;
+}
+
+/* Container */
+
+.container{
+width:1200px;
+max-width:92%;
+margin:auto;
+}
+
+/* =======================
+TOP BAR
+========================== */
+
+.topbar{
+
+background:#0050d8;
+color:#fff;
+font-size:14px;
+}
+
+.topbar .container{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+height:42px;
+
+}
+
+.top-left{
+
+display:flex;
+gap:25px;
+align-items:center;
+
+}
+
+.top-left span{
+
+display:flex;
+align-items:center;
+gap:8px;
+
+}
+
+.top-right{
+
+display:flex;
+gap:15px;
+
+}
+
+.top-right a{
+
+width:32px;
+height:32px;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:white;
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.top-right a:hover{
+
+background:white;
+color:#0050d8;
+
+}
+
+/* ==========================
+HEADER
+============================= */
+
+header{
+
+position:sticky;
+top:0;
+z-index:999;
+
+background:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.navbar{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+height:90px;
+
+}
+
+/* Logo */
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+.logo img{
+
+height:60px;
+
+}
+
+.logo-text h2{
+
+font-size:22px;
+font-weight:700;
+color:#0050d8;
+
+}
+
+.logo-text span{
+
+font-size:13px;
+color:#777;
+
+}
+
+/* Menu */
+
+.menu{
+
+display:flex;
+gap:32px;
+list-style:none;
+
+}
+
+.menu li{
+
+position:relative;
+
+}
+
+.menu a{
+
+text-decoration:none;
+font-weight:500;
+color:#222;
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#0050d8;
+
+}
+
+/* Dropdown */
+
+.dropdown{
+
+position:absolute;
+top:55px;
+left:0;
+
+width:220px;
+
+background:white;
+
+border-radius:15px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+opacity:0;
+visibility:hidden;
+
+transition:.3s;
+
+padding:15px 0;
+
+}
+
+.dropdown a{
+
+display:block;
+
+padding:12px 20px;
+
+}
+
+.menu li:hover .dropdown{
+
+opacity:1;
+visibility:visible;
+
+top:45px;
+
+}
+
+/* Button */
+
+.btn-wa{
+
+background:#0050d8;
+
+color:white;
+
+padding:14px 28px;
+
+border-radius:50px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn-wa:hover{
+
+background:#003fb3;
+
+}
+
+/* Mobile */
+
+.hamburger{
+
+display:none;
+
+font-size:28px;
+cursor:pointer;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.menu{
+
+display:none;
+
+}
+
+.btn-wa{
+
+display:none;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.topbar{
+
+display:none;
+
+}
+
+.navbar{
+
+height:80px;
+
+}
+
+.logo img{
+
+height:50px;
+
+}
+
+.logo-text h2{
+
+font-size:20px;
+
+}
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+background:linear-gradient(135deg,#eaf5ff 0%,#ffffff 70%);
+padding:70px 0 90px;
+overflow:hidden;
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+position:absolute;
+
+right:-180px;
+top:-180px;
+
+width:500px;
+height:500px;
+
+background:#0066ff15;
+
+border-radius:50%;
+
+}
+
+.hero::after{
+
+content:"";
+position:absolute;
+
+left:-120px;
+bottom:-120px;
+
+width:350px;
+height:350px;
+
+background:#1da1ff10;
+
+border-radius:50%;
+
+}
+
+.hero-wrapper{
+
+display:grid;
+
+grid-template-columns:1.1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+background:#fff;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+color:#0050d8;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+line-height:1.15;
+
+font-weight:800;
+
+color:#12304f;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:#0050d8;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:40px;
+
+max-width:620px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-bottom:55px;
+
+}
+
+.btn-primary{
+
+background:#0050d8;
+
+color:#fff;
+
+padding:17px 34px;
+
+border-radius:50px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+background:#003ea8;
+
+transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+padding:17px 34px;
+
+border:2px solid #0050d8;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#0050d8;
+
+transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+background:#0050d8;
+
+color:#fff;
+
+}
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.stat{
+
+background:#fff;
+
+padding:24px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+text-align:center;
+
+}
+
+.stat h2{
+
+font-size:34px;
+
+color:#0050d8;
+
+margin-bottom:6px;
+
+}
+
+.stat p{
+
+margin:0;
+
+font-size:14px;
+
+color:#777;
+
+}
+
+.hero-image{
+
+position:relative;
+
+}
+
+.hero-image img{
+
+width:100%;
+
+display:block;
+
+}
+
+.floating-card{
+
+position:absolute;
+
+bottom:20px;
+
+left:-40px;
+
+background:#fff;
+
+padding:18px 24px;
+
+border-radius:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.floating-card i{
+
+width:55px;
+height:55px;
+
+background:#0050d8;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+color:#fff;
+
+font-size:22px;
+
+}
+
+.floating-card h4{
+
+margin-bottom:4px;
+
+color:#12304f;
+
+}
+
+.floating-card span{
+
+font-size:14px;
+
+color:#777;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.hero{
+
+padding:50px 0;
+
+}
+
+.hero-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-image{
+
+order:-1;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.hero-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.floating-card{
+
+left:10px;
+
+bottom:10px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+text-align:center;
+
+}
+
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==================================================
+PRODUK & LAYANAN
+==================================================*/
+
+.services{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    display:inline-block;
+    background:#EAF3FF;
+    color:#0050d8;
+    padding:8px 18px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#12304f;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.section-title p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    border:1px solid #edf1f5;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#0050d8;
+    transform:scaleX(0);
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+.service-card:hover::before{
+    transform:scaleX(1);
+}
+
+.service-icon{
+    width:75px;
+    height:75px;
+    border-radius:20px;
+    background:#EAF3FF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#0050d8;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.service-card h3{
+    font-size:22px;
+    color:#12304f;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.service-card a{
+    text-decoration:none;
+    color:#0050d8;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.service-card a:hover{
+    gap:12px;
+}
+
+@media(max-width:992px){
+
+.service-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.section-title h2{
+    font-size:32px;
+}
+
+.service-grid{
+    grid-template-columns:1fr;
+}
+
+.service-card{
+    padding:28px;
+}
+
+}
+
+/*=========================================
+DESTINATION
+=========================================*/
+
+.destination{
+    padding:100px 0;
+    background:#f7faff;
+}
+
+.destination-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.destination-header h2{
+    font-size:42px;
+    color:#12304f;
+    margin-top:15px;
+}
+
+.destination-header p{
+    max-width:650px;
+    color:#666;
+    line-height:1.8;
+}
+
+.destination-btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:50px;
+    background:#0050d8;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.destination-btn:hover{
+    background:#003ea8;
+}
+
+.destination-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+.destination-card{
+
+background:#fff;
+border-radius:24px;
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+.destination-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.destination-image{
+
+position:relative;
+height:260px;
+overflow:hidden;
+
+}
+
+.destination-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.destination-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.destination-badge{
+
+position:absolute;
+left:18px;
+top:18px;
+
+background:white;
+
+padding:8px 16px;
+
+border-radius:50px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#0050d8;
+
+}
+
+.destination-rating{
+
+position:absolute;
+
+right:18px;
+top:18px;
+
+background:#FFD54A;
+
+padding:8px 14px;
+
+border-radius:50px;
+
+font-weight:700;
+
+font-size:14px;
+
+}
+
+.destination-content{
+
+padding:28px;
+
+}
+
+.destination-content h3{
+
+font-size:24px;
+margin-bottom:12px;
+color:#12304f;
+
+}
+
+.destination-content p{
+
+color:#666;
+line-height:1.7;
+
+margin-bottom:20px;
+
+}
+
+.destination-info{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:25px;
+
+padding:18px 0;
+
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
+
+}
+
+.destination-info div{
+
+text-align:center;
+flex:1;
+
+}
+
+.destination-info strong{
+
+display:block;
+font-size:18px;
+
+color:#0050d8;
+
+margin-bottom:4px;
+
+}
+
+.destination-footer{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.destination-price{
+
+font-size:14px;
+color:#777;
+
+}
+
+.destination-price strong{
+
+display:block;
+
+font-size:28px;
+
+color:#12304f;
+
+}
+
+.destination-link{
+
+background:#0050d8;
+color:white;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.destination-link:hover{
+
+background:#003ea8;
+
+}
+
+@media(max-width:992px){
+
+.destination-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.destination-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.destination-header{
+
+text-align:center;
+
+justify-content:center;
+
+}
+
+.destination-header h2{
+
+font-size:34px;
+
+}
+
+}
+
+/*==========================================
+WHY CHOOSE US
+==========================================*/
+
+.why{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.why-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.why-image{
+    position:relative;
+}
+
+.why-image img{
+    width:100%;
+    border-radius:30px;
+    display:block;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.experience-box{
+    position:absolute;
+    bottom:25px;
+    right:-30px;
+    background:#0050d8;
+    color:#fff;
+    padding:25px 30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.2);
+}
+
+.experience-box h2{
+    font-size:42px;
+    margin-bottom:5px;
+}
+
+.why-content .hero-badge{
+    margin-bottom:20px;
+}
+
+.why-content h2{
+    font-size:42px;
+    color:#12304f;
+    margin-bottom:20px;
+}
+
+.why-content p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.why-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.why-item{
+    display:flex;
+    gap:18px;
+    background:#f8fbff;
+    border-radius:18px;
+    padding:20px;
+    transition:.3s;
+}
+
+.why-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.why-icon{
+    width:60px;
+    height:60px;
+    background:#0050d8;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.why-item h4{
+    margin-bottom:8px;
+    color:#12304f;
+}
+
+.why-item p{
+    margin:0;
+    font-size:14px;
+}
+
+/*==========================================
+TESTIMONI
+==========================================*/
+
+.testimonial{
+    background:#f7faff;
+    padding:100px 0;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+.stars{
+    color:#FFC107;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.testimonial-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.client{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.client img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.client h4{
+    color:#12304f;
+}
+
+.client span{
+    color:#777;
+    font-size:14px;
+}
+
+@media(max-width:992px){
+
+.why-wrapper{
+    grid-template-columns:1fr;
+}
+
+.why-list{
+    grid-template-columns:1fr;
+}
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+.experience-box{
+    right:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.why-content h2{
+    font-size:32px;
+}
+
+}
+
+/*====================================================
+CALL TO ACTION
+====================================================*/
+
+.cta{
+    padding:90px 0;
+    background:linear-gradient(135deg,#0050d8,#006eff);
+    color:#fff;
+}
+
+.cta-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.cta h2{
+    font-size:44px;
+    line-height:1.3;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:650px;
+    opacity:.9;
+    line-height:1.8;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    color:#0050d8;
+    padding:18px 36px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    transform:translateY(-5px);
+}
+
+/*====================================================
+FOOTER
+====================================================*/
+
+footer{
+    background:#0f2238;
+    color:#fff;
+    padding-top:80px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:50px;
+}
+
+.footer-logo h2{
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.footer-logo p{
+    color:#c8d0da;
+    line-height:1.9;
+}
+
+.footer-title{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    color:#c8d0da;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#fff;
+    padding-left:6px;
+}
+
+.footer-contact li{
+    list-style:none;
+    margin-bottom:18px;
+    display:flex;
+    gap:12px;
+    color:#c8d0da;
+}
+
+.social{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.social a{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#1a3553;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#0050d8;
+}
+
+.copyright{
+    margin-top:60px;
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    padding:25px 0;
+    color:#c8d0da;
+}
+
+/*====================================================
+FLOAT BUTTON
+====================================================*/
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:30px;
+    text-decoration:none;
+    z-index:9999;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:100px;
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:#0050d8;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    font-size:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+@media(max-width:992px){
+
+.footer-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.cta h2{
+    font-size:34px;
+}
+
+}
+
+@media(max-width:768px){
+
+.footer-grid{
+    grid-template-columns:1fr;
+}
+
+.cta-wrapper{
+    text-align:center;
+    justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<div class="container">
+
+<div class="top-left">
+
+<span><i class="fa-solid fa-phone"></i> +62 812-3456-7890</span>
+
+<span><i class="fa-solid fa-envelope"></i> info@tuguwisata.com</span>
+
+</div>
+
+<div class="top-right">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+<div class="logo-text">
+
+<h2>Tugu Wisata</h2>
+
+<span>Tour & Travel Indonesia</span>
+
+</div>
+
+</div>
+
+<ul class="menu">
+
+<li>
+
+<a href="#">Home</a>
+
+</li>
+
+<li>
+
+<a href="#">Paket Tour <i class="fa-solid fa-angle-down"></i></a>
+
+<div class="dropdown">
+
+<a href="#">Tour Jogja</a>
+
+<a href="#">Tour Bali</a>
+
+<a href="#">Tour Bromo</a>
+
+<a href="#">Tour Labuan Bajo</a>
+
+</div>
+
+</li>
+
+<li>
+
+<a href="#">Destinasi</a>
+
+</li>
+
+<li>
+
+<a href="#">Galeri</a>
+
+</li>
+
+<li>
+
+<a href="#">Tentang Kami</a>
+
+</li>
+
+<li>
+
+<a href="#">Kontak</a>
+
+</li>
+
+</ul>
+
+<a href="#" class="btn-wa">
+
+<i class="fab fa-whatsapp"></i>
+
+Chat WhatsApp
+
+</a>
+
+<div class="hamburger">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- Hero akan dimulai di sini -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-wrapper">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Tour & Travel #1 di Indonesia
+
+</div>
+
+<h1>
+
+Jelajahi <span>Indonesia</span><br>
+
+Bersama Tugu Wisata
+
+</h1>
+
+<p>
+
+Nikmati pengalaman liburan yang aman, nyaman, dan berkesan bersama tim profesional kami. Tersedia paket wisata domestik, internasional, gathering perusahaan, study tour, honeymoon, hingga custom trip.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+
+<i class="fab fa-whatsapp"></i>
+
+Konsultasi Gratis
+
+</a>
+
+<a href="#" class="btn-outline">
+
+Lihat Paket Tour
+
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat">
+
+<h2>12+</h2>
+
+<p>Tahun Pengalaman</p>
+
+</div>
+
+<div class="stat">
+
+<h2>850+</h2>
+
+<p>Paket Tour</p>
+
+</div>
+
+<div class="stat">
+
+<h2>25K+</h2>
+
+<p>Pelanggan</p>
+
+</div>
+
+<div class="stat">
+
+<h2>4.9★</h2>
+
+<p>Rating Google</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/hero.png" alt="Hero Image">
+
+<div class="floating-card">
+
+<i class="fa-solid fa-plane"></i>
+
+<div>
+
+<h4>Liburan Tanpa Ribet</h4>
+
+<span>Transportasi • Hotel • Tour Guide</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Produk & Layanan</span>
+
+<h2>Pilih Layanan Terbaik Kami</h2>
+
+<p>
+Kami menyediakan berbagai pilihan paket wisata dan layanan perjalanan
+untuk keluarga, perusahaan, sekolah maupun perjalanan pribadi.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-people-group"></i>
+</div>
+
+<h3>Private Family Tour</h3>
+
+<p>
+Liburan eksklusif bersama keluarga dengan itinerary fleksibel,
+kendaraan nyaman dan tour guide profesional.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-bus"></i>
+</div>
+
+<h3>Group Tour</h3>
+
+<p>
+Paket wisata rombongan lengkap untuk komunitas, instansi maupun organisasi.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-building"></i>
+</div>
+
+<h3>Corporate Gathering</h3>
+
+<p>
+Program gathering perusahaan dengan konsep fun, profesional dan berkesan.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<h3>Employee Gathering</h3>
+
+<p>
+Bangun kekompakan tim melalui aktivitas gathering yang menyenangkan.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-campground"></i>
+</div>
+
+<h3>Outbound Training</h3>
+
+<p>
+Outbound indoor maupun outdoor untuk meningkatkan teamwork dan leadership.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h3>Study Tour</h3>
+
+<p>
+Perjalanan edukatif bagi sekolah maupun universitas dengan destinasi pilihan.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-plane"></i>
+</div>
+
+<h3>Business Trip</h3>
+
+<p>
+Layanan perjalanan bisnis lengkap mulai dari tiket, hotel hingga transportasi.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-heart"></i>
+</div>
+
+<h3>Honeymoon Package</h3>
+
+<p>
+Nikmati momen romantis bersama pasangan di berbagai destinasi terbaik.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-route"></i>
+</div>
+
+<h3>Custom Trip</h3>
+
+<p>
+Buat itinerary sesuai kebutuhan Anda dengan pilihan destinasi yang fleksibel.
+</p>
+
+<a href="#">
+Lihat Detail
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="destination">
+
+<div class="container">
+
+<div class="destination-header">
+
+<div>
+
+<span class="hero-badge">
+<i class="fa-solid fa-location-dot"></i>
+Destinasi Favorit
+</span>
+
+<h2>Destinasi Wisata Populer Indonesia</h2>
+
+<p>
+Temukan berbagai destinasi wisata terbaik di Indonesia dengan paket lengkap, harga terjangkau, dan pelayanan profesional untuk pengalaman liburan yang tak terlupakan.
+</p>
+
+</div>
+
+<a href="#" class="destination-btn">
+Lihat Semua Destinasi
+</a>
+
+</div>
+
+<div class="destination-grid">
+
+<!-- CARD -->
+
+<div class="destination-card">
+
+<div class="destination-image">
+
+<img src="images/bromo.png">
+
+<div class="destination-badge">
+Bromo
+</div>
+
+<div class="destination-rating">
+⭐ 4.9
+</div>
+
+</div>
+
+<div class="destination-content">
+
+<h3>Bromo Sunrise Tour</h3>
+
+<p>
+Nikmati keindahan matahari terbit dari Gunung Bromo dengan jeep adventure dan pemandangan yang spektakuler.
+</p>
+
+<div class="destination-info">
+
+<div>
+<strong>2H1M</strong>
+Durasi
+</div>
+
+<div>
+<strong>Private</strong>
+Trip
+</div>
+
+<div>
+<strong>Everyday</strong>
+Jadwal
+</div>
+
+</div>
+
+<div class="destination-footer">
+
+<div class="destination-price">
+
+Mulai dari
+
+<strong>Rp1.250K</strong>
+
+</div>
+
+<a href="#" class="destination-link">
+Detail
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="destination-card">
+
+<div class="destination-image">
+
+<img src="images/bali.png">
+
+<div class="destination-badge">
+Bali
+</div>
+
+<div class="destination-rating">
+⭐ 5.0
+</div>
+
+</div>
+
+<div class="destination-content">
+
+<h3>Bali Premium Trip</h3>
+
+<p>
+Eksplorasi pantai, budaya, kuliner dan sunset terbaik di Pulau Dewata dengan itinerary eksklusif.
+</p>
+
+<div class="destination-info">
+
+<div>
+
+<strong>4H3M</strong>
+
+Durasi
+
+</div>
+
+<div>
+
+<strong>Private</strong>
+
+Trip
+
+</div>
+
+<div>
+
+<strong>Daily</strong>
+
+Jadwal
+
+</div>
+
+</div>
+
+<div class="destination-footer">
+
+<div class="destination-price">
+
+Mulai dari
+
+<strong>Rp3.950K</strong>
+
+</div>
+
+<a href="#" class="destination-link">
+
+Detail
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="destination-card">
+
+<div class="destination-image">
+
+<img src="images/labuanbajo.png">
+
+<div class="destination-badge">
+Labuan Bajo
+</div>
+
+<div class="destination-rating">
+⭐ 4.9
+</div>
+
+</div>
+
+<div class="destination-content">
+
+<h3>Labuan Bajo Sailing</h3>
+
+<p>
+Berlayar menikmati Pulau Padar, Pink Beach dan Pulau Komodo dengan kapal premium.
+</p>
+
+<div class="destination-info">
+
+<div>
+
+<strong>3H2M</strong>
+
+Durasi
+
+</div>
+
+<div>
+
+<strong>Open Trip</strong>
+
+Trip
+
+</div>
+
+<div>
+
+<strong>Weekend</strong>
+
+Jadwal
+
+</div>
+
+</div>
+
+<div class="destination-footer">
+
+<div class="destination-price">
+
+Mulai dari
+
+<strong>Rp4.750K</strong>
+
+</div>
+
+<a href="#" class="destination-link">
+
+Detail
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="why-wrapper">
+
+<div class="why-image">
+
+<img src="images/about.png" alt="About">
+
+<div class="experience-box">
+
+<h2>12+</h2>
+
+<span>Tahun Pengalaman</span>
+
+</div>
+
+</div>
+
+<div class="why-content">
+
+<div class="hero-badge">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Mengapa Memilih Kami
+
+</div>
+
+<h2>Partner Perjalanan Terpercaya untuk Liburan Anda</h2>
+
+<p>
+
+Kami telah melayani ribuan pelanggan dari seluruh Indonesia dengan pelayanan profesional, armada terbaik, itinerary yang fleksibel, serta harga yang kompetitif.
+
+</p>
+
+<div class="why-list">
+
+<div class="why-item">
+
+<div class="why-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
+
+<div>
+
+<h4>Support 24 Jam</h4>
+
+<p>Tim kami siap membantu kapan pun selama perjalanan.</p>
+
+</div>
+
+</div>
+
+<div class="why-item">
+
+<div class="why-icon">
+<i class="fa-solid fa-wallet"></i>
+</div>
+
+<div>
+
+<h4>Harga Transparan</h4>
+
+<p>Tidak ada biaya tersembunyi selama perjalanan.</p>
+
+</div>
+
+</div>
+
+<div class="why-item">
+
+<div class="why-icon">
+<i class="fa-solid fa-car"></i>
+</div>
+
+<div>
+
+<h4>Armada Terawat</h4>
+
+<p>Hiace, Elf, Bus Pariwisata hingga Luxury Bus.</p>
+
+</div>
+
+</div>
+
+<div class="why-item">
+
+<div class="why-icon">
+<i class="fa-solid fa-user-tie"></i>
+</div>
+
+<div>
+
+<h4>Tour Guide Berpengalaman</h4>
+
+<p>Pemandu wisata ramah dan profesional.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONI -->
+
+<section class="testimonial">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Testimoni</span>
+
+<h2>Apa Kata Pelanggan Kami?</h2>
+
+<p>
+
+Ribuan wisatawan telah mempercayakan perjalanan mereka kepada kami.
+
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Pelayanannya luar biasa. Driver ramah, hotel nyaman, itinerary sangat rapi. Sangat direkomendasikan."
+
+</p>
+
+<div class="client">
+
+<img src="images/user1.png">
+
+<div>
+
+<h4>Budi Santoso</h4>
+
+<span>Jakarta</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Tour ke Bromo benar-benar menyenangkan. Semua sudah dipersiapkan dengan baik."
+
+</p>
+
+<div class="client">
+
+<img src="images/user2.png">
+
+<div>
+
+<h4>Rina Amelia</h4>
+
+<span>Bandung</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">★★★★★</div>
+
+<p>
+
+"Gathering kantor berjalan lancar. Tim sangat profesional dari awal hingga selesai."
+
+</p>
+
+<div class="client">
+
+<img src="images/user3.png">
+
+<div>
+
+<h4>Andi Pratama</h4>
+
+<span>Surabaya</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-wrapper">
+
+<div>
+
+<h2>
+
+Siap Merencanakan Liburan Impian Anda?
+
+</h2>
+
+<p>
+
+Hubungi tim kami sekarang juga dan dapatkan rekomendasi paket wisata terbaik dengan harga spesial.
+
+</p>
+
+</div>
+
+<a href="#" class="cta-btn">
+
+<i class="fab fa-whatsapp"></i>
+
+Konsultasi Gratis
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-logo">
+
+<h2>Tugu Wisata</h2>
+
+<p>
+
+Travel terpercaya yang melayani paket wisata domestik dan internasional,
+gathering perusahaan, study tour, honeymoon hingga custom trip.
+
+</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="#"><i class="fab fa-tiktok"></i></a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Menu
+
+</h3>
+
+<ul class="footer-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Tentang Kami</a></li>
+
+<li><a href="#">Paket Tour</a></li>
+
+<li><a href="#">Destinasi</a></li>
+
+<li><a href="#">Kontak</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Layanan
+
+</h3>
+
+<ul class="footer-links">
+
+<li><a href="#">Family Tour</a></li>
+
+<li><a href="#">Corporate</a></li>
+
+<li><a href="#">Study Tour</a></li>
+
+<li><a href="#">Honeymoon</a></li>
+
+<li><a href="#">Custom Trip</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Kontak
+
+</h3>
+
+<ul class="footer-contact">
+
+<li>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Yogyakarta, Indonesia
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-phone"></i>
+
++62 812-3456-7890
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-envelope"></i>
+
+info@tuguwisata.com
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-clock"></i>
+
+Senin - Minggu 08.00 - 22.00
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Tugu Wisata. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- FLOATING -->
+
+<a href="#" class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<button id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+</body>
+</html>
